@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -16,7 +16,7 @@ namespace SecondApp
     [Activity(Label = "Activity1")]
     public class SecondActivity : Activity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.second_layout);
@@ -36,6 +36,15 @@ namespace SecondApp
             AppInfo.ShowSettingsUI();
 
             Vibration.Vibrate(duration);
+            await NavigateToBuilding();
+
+        }
+
+        public async Task NavigateToBuilding()
+        {
+            var location = new Location(47.645160, -122.1306032);
+            var options = new MapLaunchOptions { Name = "Microsoft building" };
+            await Map.OpenAsync(location, options);
         }
     }
 }
