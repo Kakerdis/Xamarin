@@ -7,11 +7,17 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1" />
+        
     <Button
         android:text="Teisele vaatele"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minWidth="25"
-        android:minHeight="500px"
+        android:minHeight="25px"
         android:id="@+id/button1" />
+    
 </LinearLayout>
