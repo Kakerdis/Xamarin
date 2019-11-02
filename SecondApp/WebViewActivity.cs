@@ -8,21 +8,20 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Webkit;
 using Android.Widget;
 
 namespace SecondApp
 {
-    [Activity(Label = "Activity1")]
-    public class SecondActivity : Activity
+    [Activity(Label = "WebViewActivity")]
+    public class WebViewActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.second_layout);
-            var text = Intent.GetStringExtra("edittextvalue");
-
-            var textView = FindViewById<TextView>(Resource.Id.textView1);
-            textView.Text = text;
+            SetContentView(Resource.Layout.webview_layout);
+            var webView = FindViewById<WebView>(Resource.Id.webView1);
+            webView.LoadUrl("www.delfi.ee");
         }
     }
 }

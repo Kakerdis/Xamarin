@@ -8,14 +8,17 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <EditText
-        android:layout_width="263.5dp"
-        android:layout_height="115.0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/editText1" />
     <Button
-        android:text="Button"
+        android:text="Teisele vaatele"
         android:layout_width="match_parent"
-        android:layout_height="166.0dp"
-        android:id="@+id/button1"
-        android:height="250 px" />
-
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+    <Button
+        android:text="WebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
 </LinearLayout>
