@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Xamarin.Essentials;
 
 namespace SecondApp
 {
@@ -23,6 +24,14 @@ namespace SecondApp
 
             var textView = FindViewById<TextView>(Resource.Id.textView1);
             textView.Text = text;
+
+            // Essentialsi osa
+
+            var appName = AppInfo.Name;
+            var packageName = AppInfo.PackageName;
+            var version = AppInfo.VersionString;
+            var build = AppInfo.BuildString;
+
         }
     }
 }
