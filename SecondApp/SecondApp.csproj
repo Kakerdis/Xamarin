@@ -108,6 +108,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\secondLayout.xml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -18,8 +18,11 @@ namespace SecondApp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.secondLayout);
+            var text = Intent.GetStringExtra("edittextvalue");
 
-            // Create your application here
+            var textView = FindViewById<TextView>(Resource.Id.textView1);
+            textView.Text = text;
         }
     }
 }
