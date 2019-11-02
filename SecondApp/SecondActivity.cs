@@ -32,6 +32,10 @@ namespace SecondApp
             var version = AppInfo.VersionString;
             var build = AppInfo.BuildString;
 
+            var duration = TimeSpan.FromSeconds(10);
+            AppInfo.ShowSettingsUI();
+
+            Vibration.Vibrate(duration);
         }
     }
 }
