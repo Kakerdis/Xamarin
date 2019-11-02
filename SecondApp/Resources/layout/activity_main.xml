@@ -16,7 +16,7 @@
         android:text="Teisele vaatele"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minWidth="25"
+        android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/button1" />
     

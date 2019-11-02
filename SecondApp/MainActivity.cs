@@ -17,18 +17,17 @@ namespace SecondApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            
             var toSecondActivityButton = FindViewById<Button>(Resource.Id.button1);
+            var editText = FindViewById<EditText>(Resource.Id.editText1);
+            
             toSecondActivityButton.Click += delegate
             {
+                var text = editText.Text;
                 var intent = new Intent(this, typeof(SecondActivity));
+                intent.PutExtra("edittextvalue", text);
                 StartActivity(intent);
             };
-        }
-        /*public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }*/
+        }        
     }
 }
