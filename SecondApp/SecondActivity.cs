@@ -18,15 +18,8 @@ namespace SecondApp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_main);
-            // Create your application here
 
-            ValueTuple toSecondActivityButton = FindViewById<Button>(Resource.Id.button1);
-            toSecondActivityButton.Click += delegate
-            {
-                var intent = new Intent(this, typeof(SecondActivity));
-                StartActivity(intent);
-            };
+            // Create your application here
         }
     }
 }
