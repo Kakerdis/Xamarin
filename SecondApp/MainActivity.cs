@@ -15,7 +15,13 @@ namespace SecondApp
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-        }
+
+            var toSecondActivityButton = FindViewById<Button>(Resource.Id.button1);
+            toSecondActivityButton.Click += delegate
+            {
+                var intent = new Intent(this, typeof(SecondActivity));
+                StartActivity(intent);
+            }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
